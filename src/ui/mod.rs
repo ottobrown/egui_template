@@ -1,11 +1,9 @@
 use eframe::{egui, epi};
-use epi::Frame;
 use egui::Context;
+use epi::Frame;
 
-use crate::app::App;
+use crate::state::State;
 
-pub fn render(app: &mut App, ctx: &Context, _frame: &Frame) {
-    egui::CentralPanel::default().show(ctx, |ui| {
-        ui.label("HI")
-    });
+pub fn render(_state: &mut State, ctx: &Context, _frame: &Frame) {
+    egui::CentralPanel::default().show(ctx, |ui| ui.label("HI"));
 }

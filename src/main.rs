@@ -1,12 +1,11 @@
 use eframe::{run_native, NativeOptions};
 
-mod app;
+mod state;
 mod ui;
 
 fn main() {
-    let app = app::App::new();
+    let state = state::State::new();
     let ops = NativeOptions::default();
 
-    run_native(Box::new(app), ops)
+    run_native(Box::new(state), ops)
 }
-
