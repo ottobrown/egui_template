@@ -1,6 +1,6 @@
-use eframe::{egui, epi};
+use eframe::egui;
+use eframe::Frame;
 use egui::Context;
-use epi::Frame;
 
 use crate::state::State;
 

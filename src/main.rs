@@ -4,8 +4,11 @@ mod state;
 mod ui;
 
 fn main() {
-    let state = state::State::new();
     let ops = NativeOptions::default();
 
-    run_native(Box::new(state), ops)
+    run_native(
+        "Egui App",
+        ops,
+        Box::new(|cc| Box::new(state::State::new(cc))),
+    )
 }
